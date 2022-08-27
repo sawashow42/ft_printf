@@ -6,7 +6,7 @@
 /*   By: shsawaki <shsawaki@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 00:14:08 by shsawaki          #+#    #+#             */
-/*   Updated: 2022/08/25 06:29:34 by shsawaki         ###   ########.fr       */
+/*   Updated: 2022/08/27 22:45:22 by shsawaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	ft_judge(va_list arg, char format)
 	if (format == 'c')
 		len += ft_putchar(va_arg(arg, int));
 	else if (format == '%')
-		len += write(1, "%", 1);
+		len += ft_putchar('%');
 	else if (format == 's')
 		len += ft_putstr(va_arg(arg, const char *));
 	else if (format == 'p')
